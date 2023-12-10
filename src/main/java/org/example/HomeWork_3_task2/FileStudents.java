@@ -41,7 +41,7 @@ public class FileStudents {
         if (file.exists()) {
             try {
                 if (fileName.endsWith(".json")) {
-                    students = objectMapper.readValue(file, objectMapper.getTypeFactory().constructCollectionType(List.class, ToDo.class));
+                    students = objectMapper.readValue(file, objectMapper.getTypeFactory().constructCollectionType(List.class, Student.class));
                 } else if (fileName.endsWith(".bin")) {
                     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
                         students = (List<Student>) ois.readObject();
