@@ -3,7 +3,6 @@ package org.example.HomeWork_3_task2;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import org.example.task2.ToDo;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -74,13 +73,27 @@ public class FileStudents {
         }
     }
 
-    public static void displayStudents(List<Student> tasks) {
+    public static void displayStudents(List<Student> stud) {
         System.out.println("Список студентов:");
-        for (int i = 0; i < tasks.size(); i++) {
-            Student student = tasks.get(i);
+        for (int i = 0; i < stud.size(); i++) {
+            Student student = stud.get(i);
 
             System.out.println((i + 1) + ". " + student.getName() + " " + student.getAge() + " " + student.getGPA());
         }
     }
 
+    public static List<Student> DellStudent(Scanner scanner, List<Student> s) {
+        displayStudents(s);
+        System.out.println("Укажите номер студента, которого нужно удалить:");
+        int x = scanner.nextInt();
+        for (int i = 0; i < s.size(); i++) {
+            if(i+1 == x){
+                Student student = s.get(i);
+//                System.out.println((i + 1) + ". " + student.getName() + " " + student.getAge() + " " + student.getGPA());
+                s.remove(i);
+            }
+
+        }
+        return s;
+    }
 }

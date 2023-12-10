@@ -32,7 +32,7 @@ public class Program {
         while (true) {
             System.out.println("Выберите действие:");
             System.out.println("1. Добавить нового студента");
-//            System.out.println("2. ");
+            System.out.println("2. Удалить студента");
             System.out.println("3. Выйти");
 
             String choice = scanner.nextLine();
@@ -42,9 +42,9 @@ public class Program {
 
                     FileStudents.addNewStudent(scanner, students);
                     break;
-//                case "2":
-//                    ToDoListApp.markTaskAsDone(scanner, tasks);
-//                    break;
+                case "2":
+                    FileStudents.DellStudent(scanner, students);
+                    break;
                 case "3":
                     FileStudents.saveStudentToFile(FILE_JSON, students);
                     FileStudents.saveStudentToFile(FILE_BIN, students);
