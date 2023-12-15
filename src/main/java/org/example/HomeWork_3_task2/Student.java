@@ -1,5 +1,7 @@
 package org.example.HomeWork_3_task2;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.*;
 
 public class Student implements Externalizable {
@@ -58,10 +60,12 @@ public class Student implements Externalizable {
         this.age = age;
     }
 
+//    @JsonIgnore
     public double getGPA() {
         return GPA;
     }
 
+    @JsonIgnore
     public void setGPA(double GPA) {
         this.GPA = GPA;
     }

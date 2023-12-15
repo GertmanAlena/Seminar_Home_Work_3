@@ -1,17 +1,16 @@
 [ {
   "name" : "Alena",
-  "age" : 38,
-  "gpa" : 300.0
+  "age" : 38
 }, {
   "name" : "Sasha",
-  "age" : 38,
-  "gpa" : 300.0
+  "age" : 38
 }, {
   "name" : "Liza",
-  "age" : 14,
-  "gpa" : 300.0
+  "age" : 14
 }, {
   "name" : "Daniil",
-  "age" : 9,
-  "gpa" : 300.0
+  "age" : 9
+}, {
+  "name" : "Goga",
+  "age" : 15
 } ]
